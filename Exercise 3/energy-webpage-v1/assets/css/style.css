@@ -2482,4 +2482,41 @@ tbody tr:hover {
   border-radius: 10px;
 
 }
+/* STORYBOARD */
+
+.storyboard-card {
+
+  background:
+    var(--surface);
+
+  border:
+    1px solid var(--border);
+
+  border-radius:
+    22px;
+
+  padding:
+    24px;
+
+  box-shadow:
+    var(--shadow);
+
+}
+
+
+.storyboard-image {
+
+  width:
+    100%;
+
+  height:
+    auto;
+
+  object-fit:
+    contain;
+
+  border-radius:
+    12px;
+
+}
 }
