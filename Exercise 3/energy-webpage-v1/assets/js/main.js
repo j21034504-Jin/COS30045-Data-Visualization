@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setupEnergyCalculator();
 
 });
-
+  
 
 
 /* CURRENT YEAR */
