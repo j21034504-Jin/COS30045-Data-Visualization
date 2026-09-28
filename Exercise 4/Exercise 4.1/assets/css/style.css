@@ -1222,3 +1222,492 @@ section {
 }
 
 }
+/* =========================================================
+   EXERCISE 4.1 - SVG PAGE
+========================================================= */
+
+.svg-page {
+    margin: 0;
+    background: #f4f7f5;
+    color: #183028;
+}
+
+
+/* PAGE HEADER */
+
+.exercise-header {
+    background: linear-gradient(
+        135deg,
+        #064a29,
+        #0b6b3a
+    );
+
+    color: white;
+
+    padding: 60px 24px;
+}
+
+.exercise-header-content {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+}
+
+.exercise-tag {
+    margin: 0 0 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.12em;
+
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    color: #bfe8ce;
+}
+
+.exercise-header h1 {
+    margin: 0;
+
+    text-align: left;
+
+    font-size: clamp(
+        2rem,
+        5vw,
+        3.5rem
+    );
+
+    line-height: 1.1;
+}
+
+.exercise-intro {
+    max-width: 700px;
+
+    margin-top: 18px;
+
+    color: #e1f3e7;
+
+    font-size: 1.05rem;
+}
+
+
+/* PAGE CONTAINER */
+
+.exercise-container {
+    width: min(
+        1100px,
+        calc(100% - 32px)
+    );
+
+    margin: 50px auto;
+
+    display: grid;
+
+    gap: 40px;
+}
+
+
+/* MAIN CARDS */
+
+.exercise-card {
+    background: white;
+
+    border: 1px solid #d7e2dc;
+
+    border-radius: 24px;
+
+    padding: 36px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.06);
+}
+
+
+/* STEP HEADINGS */
+
+.step-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 20px;
+}
+
+.step-number {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #0b6b3a;
+
+    color: white;
+
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.step-label {
+    margin: 0;
+
+    color: #0b6b3a;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    font-size: 0.75rem;
+
+    font-weight: bold;
+}
+
+.step-heading h2 {
+    margin: 2px 0 0;
+
+    font-size: 1.8rem;
+}
+
+.section-description {
+    max-width: 760px;
+
+    margin-bottom: 28px;
+
+    color: #60736b;
+}
+
+
+/* SVG DISPLAY */
+
+.svg-display {
+    padding: 18px;
+
+    background: #eef4f0;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+}
+
+.svg-display svg {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto;
+
+    border-radius: 10px;
+}
+
+
+/* SHAPE SUMMARY */
+
+.shape-summary {
+    margin-top: 24px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+.shape-summary div {
+    padding: 16px;
+
+    border-radius: 12px;
+
+    background: #f5faf7;
+
+    border:
+        1px solid #d7e2dc;
+}
+
+.shape-summary strong {
+    display: block;
+
+    color: #064a29;
+
+    margin-bottom: 4px;
+}
+
+.shape-summary span {
+    font-size: 0.9rem;
+
+    color: #60736b;
+}
+
+
+/* COORDINATE SECTION */
+
+.coordinate-layout {
+    display: grid;
+
+    grid-template-columns:
+        0.8fr 1.5fr;
+
+    gap: 30px;
+
+    align-items: center;
+}
+
+.coordinate-text h3 {
+    margin-bottom: 12px;
+}
+
+.coordinate-text p {
+    margin-bottom: 12px;
+
+    color: #60736b;
+}
+
+.coordinate-example {
+    margin-top: 22px;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+    background: #edf8f1;
+
+    border-left:
+        4px solid #0b6b3a;
+}
+
+.coordinate-example ul {
+    margin-top: 10px;
+
+    padding-left: 20px;
+}
+
+.coordinate-example li {
+    margin: 5px 0;
+}
+
+.coordinate-image img {
+    width: 100%;
+
+    display: block;
+
+    border-radius: 16px;
+
+    border:
+        1px solid #d7e2dc;
+}
+
+
+/* BEFORE / AFTER */
+
+.comparison-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+.comparison-card {
+    padding: 20px;
+
+    border:
+        1px solid #d7e2dc;
+
+    border-radius: 18px;
+
+    background: #fafcfb;
+}
+
+.comparison-card img {
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    object-fit: contain;
+
+    background: white;
+
+    border-radius: 12px;
+
+    border:
+        1px solid #e1e8e4;
+}
+
+.comparison-card p {
+    margin: 14px 0 0;
+
+    color: #60736b;
+}
+
+.comparison-title {
+    margin-bottom: 14px;
+}
+
+.comparison-title h3 {
+    margin: 8px 0 0;
+}
+
+.comparison-badge {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 999px;
+
+    font-size: 0.75rem;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+.before-badge {
+    background: #ececec;
+
+    color: #444;
+}
+
+.after-badge {
+    background: #dff3e7;
+
+    color: #064a29;
+}
+
+
+/* TABLE */
+
+.changes-section {
+    margin-top: 40px;
+}
+
+.changes-section h3 {
+    margin-bottom: 18px;
+
+    font-size: 1.5rem;
+}
+
+.table-scroll {
+    overflow-x: auto;
+
+    border:
+        1px solid #d7e2dc;
+
+    border-radius: 16px;
+}
+
+.changes-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 760px;
+}
+
+.changes-table th,
+.changes-table td {
+    padding: 15px 18px;
+
+    text-align: left;
+
+    vertical-align: top;
+
+    border-bottom:
+        1px solid #e2e9e5;
+}
+
+.changes-table th {
+    background: #064a29;
+
+    color: white;
+}
+
+.changes-table tbody tr:nth-child(even) {
+    background: #f7faf8;
+}
+
+.changes-table tbody tr:hover {
+    background: #edf8f1;
+}
+
+
+/* FOOTER */
+
+.exercise-footer {
+    margin-top: 60px;
+
+    padding: 26px;
+
+    text-align: center;
+
+    background: #064a29;
+
+    color: white;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .coordinate-layout,
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shape-summary {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .exercise-card {
+        padding: 24px;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .exercise-header {
+        padding: 42px 20px;
+    }
+
+    .exercise-container {
+        width:
+            min(100% - 20px, 1100px);
+
+        margin-top: 25px;
+    }
+
+    .exercise-card {
+        padding: 18px;
+
+        border-radius: 16px;
+    }
+
+    .step-heading {
+        align-items: flex-start;
+    }
+
+    .step-number {
+        width: 42px;
+        height: 42px;
+    }
+
+    .shape-summary {
+        grid-template-columns: 1fr;
+    }
+
+}

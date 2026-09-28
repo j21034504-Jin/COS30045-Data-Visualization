@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exercise 4.1 - SVG House</title>
+
+    <!-- Correct stylesheet path -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <h1>Exercise 4.1: SVG House and Garden</h1>
+
+    <p>
+        This SVG demonstrates different SVG shapes including rectangles,
+        circles, ellipses, lines, polygons, polylines, paths and text.
+    </p>
+
+
+    <!-- =====================================================
+         STEP 1: SVG HOUSE AND GARDEN
+    ====================================================== -->
+
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1000"
+    height="550"
+    viewBox="0 0 800 550"
+>
+
+    <rect
+        x="0"
+        y="0"
+        width="1000" 
+        height="400"
+        fill="lightblue"
+    />
+
+
+        <!-- GRASS -->
+        <rect
+            x="0"
+            y="400"
+            width="1000"
+            height="150"
+            fill="green"
+        />
+
+
+        <!-- SUN -->
+        <circle
+            cx="720"
+            cy="150"
+            r="65"
+            fill="yellow"
+            stroke="darkorange"
+            stroke-width="10"
+        />
+
+
+        <!-- HOUSE BODY - Rectangle -->
+        <rect
+            x="220"
+            y="220"
+            width="450"
+            height="230"
+            fill="burlywood"
+            stroke="black"
+            stroke-width="3"
+        />
+
+
+        <!-- ROOF - Polygon -->
+        <polygon
+            points="180,220 450,80 700,220"
+            fill="firebrick"
+            stroke="black"
+            stroke-width="3"
+        />
+
+
+        <!-- CHIMNEY -->
+        <rect
+            x="500"
+            y="70"
+            width="25"
+            height="150"
+            fill="brown"
+            stroke="black"
+            stroke-width="3"
+        />
+
+
+        <!-- DOOR -->
+        <rect
+            x="390"
+            y="325"
+            width="80"
+            height="125"
+            fill="saddlebrown"
+            stroke="black"
+            stroke-width="3"
+        />
+
+
+        <!-- DOOR KNOB -->
+        <circle
+            cx="450"
+            cy="390"
+            r="6"
+            fill="gold"
+        />
+
+
+        <!-- =================================================
+             WINDOWS GROUP
+
+             Both windows use the same style because they
+             are placed inside the same <g> element.
+        ================================================== -->
+
+        <g
+            fill="lightyellow"
+            stroke="navy"
+            stroke-width="4"
+        >
+
+            <!-- LEFT WINDOW -->
+            <g transform="translate(265,275)">
+
+                <rect
+                    x="0"
+                    y="0"
+                    width="65"
+                    height="65"
+                />
+
+                <line
+                    x1="32.5"
+                    y1="0"
+                    x2="32.5"
+                    y2="65"
+                />
+
+                <line
+                    x1="0"
+                    y1="32.5"
+                    x2="65"
+                    y2="32.5"
+                />
+
+            </g>
+
+
+            <!-- RIGHT WINDOW -->
+            <g transform="translate(550,275)">
+
+                <rect
+                    x="0"
+                    y="0"
+                    width="65"
+                    height="65"
+                />
+
+                <line
+                    x1="40.5"
+                    y1="0"
+                    x2="32.5"
+                    y2="65"
+                />
+
+                <line
+                    x1="0"
+                    y1="32.5"
+                    x2="65"
+                    y2="32.5"
+                />
+
+            </g>
+
+        </g>
+
+
+        <!-- PATH TO HOUSE - Path -->
+        <path
+            d="M370 550 Q400 470 430 450"
+            fill="none"
+            stroke="tan"
+            stroke-width="60"
+        />
+
+
+        <!-- TREE TRUNK -->
+        <rect
+            x="90"
+            y="330"
+            width="50"
+            height="120"
+            fill="saddlebrown"
+        />
+
+
+        <!-- TREE LEAVES - Ellipses -->
+        <ellipse
+            cx="108"
+            cy="300"
+            rx="70"
+            ry="80"
+            fill="forestgreen"
+        />
+
+        <ellipse
+            cx="75"
+            cy="320"
+            rx="45"
+            ry="55"
+            fill="green"
+        />
+
+        <ellipse
+            cx="145"
+            cy="320"
+            rx="45"
+            ry="55"
+            fill="green"
+        />
+
+
+        <!-- FLOWER STEMS - Lines -->
+        <line
+            x1="650"
+            y1="420"
+            x2="650"
+            y2="480"
+            stroke="lightgreen"
+            stroke-width="4"
+        />
+
+        <line
+            x1="700"
+            y1="420"
+            x2="700"
+            y2="480"
+            stroke="lightgreen"
+            stroke-width="4"
+        />
+
+
+        <!-- FLOWERS -->
+        <circle
+            cx="650"
+            cy="415"
+            r="20"
+            fill="pink"
+        />
+
+        <circle
+            cx="700"
+            cy="415"
+            r="14"
+            fill="purple"
+        />
+
+
+        <!-- WOODEN FENCE -->
+<g stroke="saddlebrown" stroke-width="3" fill="#deb887">
+
+    <!-- Rails -->
+    <line x1="15" y1="440" x2="185" y2="440" />
+    <line x1="15" y1="468" x2="185" y2="468" />
+
+    <!-- Posts -->
+    <polygon points="20,420 30,408 40,420 40,480 20,480" />
+    <polygon points="50,420 60,408 70,420 70,480 50,480" />
+    <polygon points="80,420 90,408 100,420 100,480 80,480" />
+    <polygon points="110,420 120,408 130,420 130,480 110,480" />
+    <polygon points="140,420 150,408 160,420 160,480 140,480" />
+    <polygon points="170,420 180,408 190,420 190,480 170,480" />
+
+</g>
+
+
+        <!-- TEXT -->
+        <text
+            x="450"
+            y="50"
+            text-anchor="middle"
+            font-size="28"
+            font-family="Arial"
+            fill="darkblue"
+        >
+            My SVG House
+        </text>
+
+    </svg>
+
+
+
+    <!-- =====================================================
+         STEP 3: SVG CUSTOMISATION
+    ====================================================== -->
+
+    <section class="customisation-section">
+
+        <h2>Step 3: SVG Customisation</h2>
+
+        <p>
+            The SVG picture was customised by changing colours, moving shapes,
+            modifying strokes and adding extra elements to the house and garden.
+        </p>
+
+
+        <!-- BEFORE AND AFTER -->
+        <div class="comparison-container">
+
+            <div class="comparison-card">
+
+                <h3>Before</h3>
+
+                <img
+                    src="images/before.png"
+                    alt="Original SVG house before customisation"
+                >
+
+                <p>
+                    Original SVG design
+                </p>
+
+            </div>
+
+
+            <div class="comparison-card">
+
+                <h3>After</h3>
+
+                <img
+                    src="images/after.png"
+                    alt="SVG house after customisation"
+                >
+
+                <p>
+                    Customised SVG design
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CUSTOMISATION TABLE -->
+
+        <h3>Changes Made</h3>
+
+        <table class="changes-table">
+
+            <thead>
+
+                <tr>
+                    <th>SVG Element</th>
+                    <th>Before</th>
+                    <th>After</th>
+                    <th>What I Changed</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <tr>
+                    <td>House</td>
+                    <td>Light brown</td>
+                    <td>New customised colour</td>
+                    <td>
+                        Changed the fill colour and increased the stroke width.
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>Roof</td>
+                    <td>Red</td>
+                    <td>Dark red / purple</td>
+                    <td>
+                        Changed the fill and stroke colours.
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>Sun</td>
+                    <td>Original position</td>
+                    <td>Moved position</td>
+                    <td>
+                        Changed the cx and cy coordinates.
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>Garden Path</td>
+                    <td>Simple path</td>
+                    <td>Curved path</td>
+                    <td>
+                        Modified the SVG path using the d attribute.
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>Garden</td>
+                    <td>Basic garden</td>
+                    <td>More detailed garden</td>
+                    <td>
+                        Added additional flowers and garden elements.
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>Extra Elements</td>
+                    <td>None / Basic</td>
+                    <td>Pond, bird, chimney, etc.</td>
+                    <td>
+                        Added additional SVG shapes to make the scene more detailed.
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         STEP 2: SVG COORDINATE SYSTEM
+    ====================================================== -->
+
+    <section>
+
+        <h2>Step 2: SVG Coordinate System</h2>
+
+        <p>
+            SVG coordinates begin at the top-left corner.
+            The x-coordinate increases from left to right,
+            while the y-coordinate increases from top to bottom.
+        </p>
+
+        <img
+            src="images/House.png"
+            alt="Annotated SVG coordinate examples"
+            class="annotation-image"
+        >
+
+    </section>
+
+
+</body>
+
+</html>

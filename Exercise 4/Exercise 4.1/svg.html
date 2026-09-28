@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exercise 4.1 - SVG House</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="svg-page">
+
+    <!-- PAGE HEADER -->
+    <header class="exercise-header">
+
+        <div class="exercise-header-content">
+
+            <p class="exercise-tag">COS30045 Data Visualisation</p>
+
+            <h1>Exercise 4.1: SVG House and Garden</h1>
+
+            <p class="exercise-intro">
+                This exercise demonstrates the use of different SVG shapes,
+                coordinates, grouping and customisation to create a house
+                and garden scene.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <main class="exercise-container">
+
+
+        <!-- =====================================================
+             STEP 1
+        ====================================================== -->
+
+        <section class="exercise-card">
+
+            <div class="step-heading">
+
+                <span class="step-number">1</span>
+
+                <div>
+                    <p class="step-label">Step 1</p>
+                    <h2>Create the SVG House and Garden</h2>
+                </div>
+
+            </div>
+
+
+            <p class="section-description">
+                The SVG below uses rectangles, circles, ellipses,
+                lines, polygons, paths, grouped elements and text
+                to create a simple house and garden.
+            </p>
+
+
+            <div class="svg-display">
+
+                <!-- ==========================================
+                     PUT YOUR EXISTING <svg>...</svg> HERE
+                =========================================== -->
+
+            </div>
+
+
+            <div class="shape-summary">
+
+                <div>
+                    <strong>Rectangle</strong>
+                    <span>House, door and tree trunk</span>
+                </div>
+
+                <div>
+                    <strong>Circle</strong>
+                    <span>Sun, flowers and door knob</span>
+                </div>
+
+                <div>
+                    <strong>Ellipse</strong>
+                    <span>Tree leaves</span>
+                </div>
+
+                <div>
+                    <strong>Polygon</strong>
+                    <span>Roof and fence posts</span>
+                </div>
+
+                <div>
+                    <strong>Line</strong>
+                    <span>Windows, flowers and fence rails</span>
+                </div>
+
+                <div>
+                    <strong>Path</strong>
+                    <span>Garden pathway</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             STEP 2
+        ====================================================== -->
+
+        <section class="exercise-card">
+
+            <div class="step-heading">
+
+                <span class="step-number">2</span>
+
+                <div>
+                    <p class="step-label">Step 2</p>
+                    <h2>SVG Coordinate System</h2>
+                </div>
+
+            </div>
+
+
+            <div class="coordinate-layout">
+
+                <div class="coordinate-text">
+
+                    <h3>How SVG coordinates work</h3>
+
+                    <p>
+                        SVG coordinates begin at the top-left corner at
+                        <strong>(0,0)</strong>.
+                    </p>
+
+                    <p>
+                        The <strong>x-coordinate</strong> increases from
+                        left to right, while the
+                        <strong>y-coordinate</strong> increases from
+                        top to bottom.
+                    </p>
+
+                    <div class="coordinate-example">
+
+                        <p><strong>Example coordinates:</strong></p>
+
+                        <ul>
+                            <li>Roof top point: (400, 80)</li>
+                            <li>House top-left: (220, 220)</li>
+                            <li>Tree centre: approximately (108, 300)</li>
+                            <li>Sun centre: (720, 150)</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="coordinate-image">
+
+                    <img
+                        src="assets/img/Cordinates.png"
+                        alt="Annotated SVG coordinate system"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             STEP 3
+        ====================================================== -->
+
+        <section class="exercise-card">
+
+            <div class="step-heading">
+
+                <span class="step-number">3</span>
+
+                <div>
+                    <p class="step-label">Step 3</p>
+                    <h2>SVG Customisation</h2>
+                </div>
+
+            </div>
+
+
+            <p class="section-description">
+                The original SVG was customised by changing colours,
+                positions, dimensions and strokes, as well as improving
+                elements such as the fence and garden.
+            </p>
+
+
+            <!-- BEFORE / AFTER -->
+
+            <div class="comparison-grid">
+
+                <article class="comparison-card">
+
+                    <div class="comparison-title">
+                        <span class="comparison-badge before-badge">
+                            Before
+                        </span>
+
+                        <h3>Original Design</h3>
+                    </div>
+
+                    <img
+                        src="assets/img/Before.png"
+                        alt="Original SVG house before customisation"
+                    >
+
+                    <p>
+                        The original SVG house before additional
+                        styling and layout changes.
+                    </p>
+
+                </article>
+
+
+                <article class="comparison-card">
+
+                    <div class="comparison-title">
+                        <span class="comparison-badge after-badge">
+                            After
+                        </span>
+
+                        <h3>Customised Design</h3>
+                    </div>
+
+                    <img
+                        src="assets/img/After.png"
+                        alt="SVG house after customisation"
+                    >
+
+                    <p>
+                        The customised version includes updated colours,
+                        positioning, dimensions and a redesigned fence.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <!-- CHANGES TABLE -->
+
+            <div class="changes-section">
+
+                <h3>Changes Made</h3>
+
+                <div class="table-scroll">
+
+                    <table class="changes-table">
+
+                        <thead>
+                            <tr>
+                                <th>SVG Element</th>
+                                <th>Before</th>
+                                <th>After</th>
+                                <th>What I Changed</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td><strong>Sun</strong></td>
+                                <td>Orange sun in top-right</td>
+                                <td>Yellow sun with orange border</td>
+                                <td>
+                                    Changed the fill colour, size
+                                    and coordinates.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Grass</strong></td>
+                                <td>Light green</td>
+                                <td>Dark green</td>
+                                <td>
+                                    Changed the grass rectangle
+                                    fill colour.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Fence</strong></td>
+                                <td>White zig-zag polyline</td>
+                                <td>Wooden picket fence</td>
+                                <td>
+                                    Replaced the basic polyline with
+                                    polygon posts and horizontal rails.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>House</strong></td>
+                                <td>Smaller house</td>
+                                <td>Larger and wider house</td>
+                                <td>
+                                    Changed the dimensions and position.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Roof</strong></td>
+                                <td>Smaller roof</td>
+                                <td>Wider roof</td>
+                                <td>
+                                    Adjusted the polygon coordinates.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Windows</strong></td>
+                                <td>Original positions</td>
+                                <td>Repositioned windows</td>
+                                <td>
+                                    Changed the transform coordinates
+                                    while keeping the windows grouped.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Garden Path</strong></td>
+                                <td>Short path</td>
+                                <td>Larger curved path</td>
+                                <td>
+                                    Modified the path coordinates
+                                    and stroke width.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Flowers</strong></td>
+                                <td>Small flowers</td>
+                                <td>Resized and repositioned</td>
+                                <td>
+                                    Adjusted the circle and stem
+                                    coordinates.
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer class="exercise-footer">
+
+        <p>
+            Exercise 4.1 — SVG House and Garden
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
