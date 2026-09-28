@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f5f7f6;
+    color: #222;
+}
+
+main {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+}
+
+
+/* =====================================================
+   CHART CARD
+===================================================== */
+
+.chart-card {
+    margin-top: 30px;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border: 1px solid #dddddd;
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 24px
+        rgba(0, 0, 0, 0.08);
+}
+
+.chart-card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+
+/* =====================================================
+   RESPONSIVE SVG CONTAINER
+===================================================== */
+
+.responsive-svg-container {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.responsive-svg-container svg {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+/* =====================================================
+   BAR CHART
+===================================================== */
+
+.bar {
+    fill: green;
+}
+
+.bar:hover {
+    opacity: 0.8;
+}
+
+
+/* =====================================================
+   AXIS
+===================================================== */
+
+.axis path,
+.axis line {
+    stroke: #777777;
+}
+
+.axis text {
+    font-size: 13px;
+    fill: #333333;
+}
+
+
+/* =====================================================
+   AXIS LABEL
+===================================================== */
+
+.axis-label {
+    font-size: 15px;
+    font-weight: bold;
+
+    fill: #222222;
+}
+
+
+/* =====================================================
+   VALUE LABELS ABOVE BARS
+===================================================== */
+
+.value-label {
+    font-size: 13px;
+    font-weight: normal;
+
+    fill: #111111;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .chart-card {
+        padding: 18px;
+    }
+
+    .axis text {
+        font-size: 11px;
+    }
+
+    .value-label {
+        font-size: 11px;
+    }
+
+    .axis-label {
+        font-size: 13px;
+    }
+}
+/* =====================================================
+   EXERCISE 5.2 - LINE CHART
+===================================================== */
+
+.price-line {
+    fill: none;
+    stroke: green;
+    stroke-width: 2;
+}
+
+.data-point {
+    fill: green;
+    stroke: white;
+    stroke-width: 1;
+}
+
+.data-point:hover {
+    r: 6;
+}
+/* =====================================================
+   EXERCISE 5.3 - DONUT CHART
+===================================================== */
+
+.donut-slice {
+    transition: opacity 0.2s;
+}
+
+.donut-slice:hover {
+    opacity: 0.8;
+}
+
+.donut-label {
+    font-size: 14px;
+    font-weight: bold;
+    fill: #222222;
+    pointer-events: none;
+}
