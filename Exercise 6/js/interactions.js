@@ -62,3 +62,13 @@ const updateHistogram = (filterId, data) => {
 
 const populateFilters = (data) => {}
 };
+
+// Exercise 6.4 - Tooltip placeholder functions
+
+const createTooltip = () => {
+    // Tooltip will be implemented in Exercise 6.4
+};
+
+const handleMouseEvents = () => {
+    // Mouse events will be implemented in Exercise 6.4
+};

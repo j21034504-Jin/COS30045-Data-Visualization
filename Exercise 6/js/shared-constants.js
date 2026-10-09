@@ -33,3 +33,19 @@ const filters_screen = [
     { id: "LCD", label: "LCD", isActive: false },
     { id: "OLED", label: "OLED", isActive: false }
 ];
+
+// Exercise 6.3 - Scatterplot
+
+// Inner chart for scatterplot
+let innerChartS;
+
+// Tooltip dimensions (for Exercise 6.4)
+const tooltipWidth = 65;
+const tooltipHeight = 32;
+
+// Scatterplot scales
+const xScaleS = d3.scaleLinear();
+const yScaleS = d3.scaleLinear();
+
+// Colour scale for TV screen technology
+const colorScale = d3.scaleOrdinal();
