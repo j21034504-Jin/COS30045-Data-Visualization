@@ -1,0 +1,31 @@
+
+/* Histogram container */
+#histogram {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #fffaf0;
+}
+
+/* Responsive SVG */
+#histogram svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Axis styling */
+#histogram .domain,
+#histogram .tick line {
+    stroke: #8a8178;
+}
+
+#histogram .tick text {
+    font-size: 11px;
+    fill: #594b3f;
+}
+
+/* Axis labels */
+#histogram .axis-label {
+    fill: #594b3f;
+    font-size: 13px;
+}

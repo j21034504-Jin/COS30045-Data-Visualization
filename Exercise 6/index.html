@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6.1 - TV Energy Consumption</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/visualisation.css">
+</head>
+
+<body>
+    <main class="dashboard">
+        <header class="banner">
+            <h1>TV Energy Consumption</h1>
+        </header>
+
+        <section class="content">
+            <h2>Energy Consumption for Different TV Screen Types and Sizes</h2>
+
+            <p>TVs vary considerably in energy consumption.</p>
+
+            <!-- Histogram container -->
+            <div id="histogram"></div>
+
+            <div class="data-source">
+                <h3>Data Source</h3>
+                <p>Energy Rating Data for Household Appliances - Televisions</p>
+                <p>Downloaded January 2026</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; COS30045 Data Visualisation - Week 6</p>
+        </footer>
+    </main>
+
+    <!-- JavaScript Files: order is important -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/load-data.js"></script>
+    <script src="js/shared-constants.js"></script>
+    <script src="js/interactions.js"></script>
+    <script src="js/histogram.js"></script>
+</body>
+</html>

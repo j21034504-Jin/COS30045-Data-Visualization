@@ -1,0 +1,87 @@
+
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #594b3f;
+}
+
+/* Main container */
+.dashboard {
+    max-width: 950px;
+    margin: 0 auto;
+    background-color: #fffaf0;
+}
+
+/* Header */
+.banner {
+    background-color: #d9681d;
+    padding: 20px 25px;
+}
+
+.banner h1 {
+    margin: 0;
+    color: #493a2f;
+    font-size: 30px;
+}
+
+/* Main content */
+.content {
+    padding: 25px;
+}
+
+.content h2 {
+    font-size: 24px;
+    line-height: 1.4;
+    margin-top: 0;
+}
+
+.content p {
+    font-size: 14px;
+}
+
+/* Data source */
+.data-source {
+    margin-top: 20px;
+}
+
+.data-source h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.data-source p {
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+/* Footer */
+footer {
+    padding: 10px 25px 20px;
+    font-size: 12px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .content h2 {
+        font-size: 19px;
+    }
+}
