@@ -28,7 +28,7 @@ d3.csv("data/Ex6_TVdata_withStar.csv", d => ({
 
     // Prepare tooltip functionality for Exercise 6.4
     createTooltip();
-    handleMouseEvents();
+    handleMouseEvents();    
 
 })
 .catch(error => {

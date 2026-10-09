@@ -63,12 +63,87 @@ const updateHistogram = (filterId, data) => {
 const populateFilters = (data) => {}
 };
 
-// Exercise 6.4 - Tooltip placeholder functions
 
+// Exercise 6.4 - Tooltip functionality
+
+// Create the tooltip on the scatterplot
 const createTooltip = () => {
-    // Tooltip will be implemented in Exercise 6.4
+
+    // Create tooltip group
+    const tooltip = innerChartS
+        .append("g")
+        .attr("class", "tooltip")
+        .attr("pointer-events", "none")
+        .style("opacity", 0);
+
+    // Create tooltip background rectangle
+    tooltip
+        .append("rect")
+        .attr("width", tooltipWidth)
+        .attr("height", tooltipHeight)
+        .attr("rx", 3)
+        .attr("ry", 3)
+        .attr("fill", barColor)
+        .attr("fill-opacity", 0.75);
+
+    // Create tooltip text
+    tooltip
+        .append("text")
+        .text("NA")
+        .attr("x", tooltipWidth / 2)
+        .attr("y", tooltipHeight / 2 + 2)
+        .attr("text-anchor", "middle")
+        .attr("alignment-baseline", "middle")
+        .attr("fill", "white")
+        .style("font-weight", 900);
 };
 
+
+// Handle mouse interactions
 const handleMouseEvents = () => {
-    // Mouse events will be implemented in Exercise 6.4
+
+    // Select scatterplot circles only
+    innerChartS
+        .selectAll("circle")
+
+        // When mouse enters a circle
+        .on("mouseenter", (event, d) => {
+
+            console.log("Mouse entered circle", d);
+
+            // Update tooltip text with TV screen size
+            innerChartS
+                .select(".tooltip text")
+                .text(d.screenSize);
+
+            // Get the position of the circle
+            const cx = +event.currentTarget.getAttribute("cx");
+            const cy = +event.currentTarget.getAttribute("cy");
+
+            // Position and display the tooltip
+            innerChartS
+                .select(".tooltip")
+                .attr(
+                    "transform",
+                    `translate(${cx - 0.5 * tooltipWidth},
+                    ${cy - 1.5 * tooltipHeight})`
+                )
+                .interrupt()
+                .transition()
+                .duration(200)
+                .style("opacity", 1);
+        })
+
+        // When mouse leaves a circle
+        .on("mouseleave", (event, d) => {
+
+            console.log("Mouse left circle", d);
+
+            // Hide the tooltip
+            innerChartS
+                .select(".tooltip")
+                .interrupt()
+                .style("opacity", 0)
+                .attr("transform", "translate(0, 500)");
+        });
 };
