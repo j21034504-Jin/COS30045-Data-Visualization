@@ -85,3 +85,42 @@ footer p {
         font-size: 19px;
     }
 }
+
+/* Screen technology filters */
+#filters_screen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+/* Default button */
+.filter {
+    background-color: #d9681d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 22px;
+    min-width: 65px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Active filter */
+.filter.active {
+    background-color: #ffcd80;
+    color: white;
+}
+
+/* Hover effect */
+.filter:hover {
+    background-color: #e88a3b;
+}
+
+/* Active button stays highlighted */
+.filter.active:hover {
+    background-color: #ffcd80;
+}
+

@@ -8,16 +8,16 @@ d3.csv("data/Ex6_TVdata_withStar.csv", d => ({
     star: +d.star
 }))
 .then(data => {
-
-    // Check loaded data in the browser console
-    console.log("Loaded TV data:", data);
-
-    // Draw the histogram
+    // Keep the histogram bin boundaries consistent
+    const maxEnergy = Math.ceil(
+        d3.max(data, d => d.energyConsumption) / 200
+    ) * 200;
+    binGenerator
+        .domain([0, maxEnergy])
+        .thresholds(d3.range(200, maxEnergy, 200));
+    // Draw histogram and populate filters
     drawHistogram(data);
-
-    // Prepare for filters in Exercise 6.2
     populateFilters(data);
-
 })
 .catch(error => {
     console.error("Error loading CSV file:", error);
