@@ -1,0 +1,18 @@
+
+/* Original Exercise 5 chart selectors; scoped to chart containers in PowerWise. */
+.chart-card h4 {margin:0 0 12px;font-size:1.1rem;color:#183028;}
+.responsive-svg-container{width:100%;min-width:0;margin-top:12px;}
+.responsive-svg-container svg{display:block;width:100%;height:auto;max-width:100%;}
+#bar-chart .bar{fill:green;}
+#bar-chart .bar:hover{opacity:.8;}
+.responsive-svg-container .axis path,.responsive-svg-container .axis line{stroke:#777;}
+.responsive-svg-container .axis text{font-size:13px;fill:#333;}
+.responsive-svg-container .axis-label{font-size:15px;font-weight:bold;fill:#222;}
+.responsive-svg-container .value-label{font-size:13px;fill:#111;}
+#line-chart .price-line{fill:none;stroke:green;stroke-width:2;}
+#line-chart .data-point{fill:green;stroke:white;stroke-width:1;}
+#line-chart .data-point:hover{r:6;}
+#donut-chart .donut-slice{transition:opacity .2s;}
+#donut-chart .donut-slice:hover{opacity:.8;}
+#donut-chart .donut-label{font-size:14px;font-weight:bold;fill:#222;pointer-events:none;}
+@media(max-width:700px){.responsive-svg-container .axis text,.responsive-svg-container .value-label{font-size:11px;}.responsive-svg-container .axis-label{font-size:13px;}}
