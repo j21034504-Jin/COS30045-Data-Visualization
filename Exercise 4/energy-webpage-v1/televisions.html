@@ -1,366 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-    PowerWise Australia | Televisions
+   PowerWise Australia | Televisions &middot; Exercises 4.3&ndash;4.7
   </title>
-
-  <link
-    rel="stylesheet"
-    href="assets/css/style.css"
-  >
-
-</head>
-
-
-<body>
-
-
-<header class="site-header">
-
-  <nav class="navbar">
-
-    <a
-      class="logo-link"
-      href="index.html"
-    >
-
-      <img
-        src="assets/img/PowerIcon.png"
-        alt="Power logo"
-        class="logo"
-      >
-
-      <span class="brand-name">
-        PowerWise
-      </span>
-
+  <link href="assets/css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="site-header">
+   <nav class="navbar">
+    <a class="logo-link" href="index.html">
+     <img alt="Power logo" class="logo" src="assets/img/PowerIcon.png"/>
+     <span class="brand-name">
+      PowerWise
+     </span>
     </a>
-
-
-    <button
-      class="menu-toggle"
-      type="button"
-    >
-      ☰
+    <button class="menu-toggle" type="button">
+     ☰
     </button>
-
-
     <ul class="nav-links">
-
-      <li>
-        <a href="index.html">
-          Home
-        </a>
-      </li>
-
-      <li>
-        <a
-          class="active"
-          href="televisions.html"
-        >
-          Televisions
-        </a>
-      </li>
-
-      <li>
-        <a href="about.html">
-          About Us
-        </a>
-      </li>
-
+     <li>
+      <a href="index.html">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="active" href="televisions.html">
+       Televisions
+      </a>
+     </li>
+     <li>
+      <a href="about.html">
+       About Us
+      </a>
+     </li>
     </ul>
-
-  </nav>
-
-</header>
-
-
-
-<main>
-
-
-<section class="page-banner">
-
-  <p class="eyebrow">
-    Televisions
-  </p>
-
-  <h1>
-    Television energy consumption
-  </h1>
-
-  <p>
-    Explore information about television electricity usage
-    and energy efficiency in Australian households.
-  </p>
-
-</section>
-
-
-
-<section class="section">
-
-
-  <div class="section-heading">
-
+   </nav>
+  </header>
+  <main>
+   <section class="page-banner">
     <p class="eyebrow">
-      Overview
+     Televisions
     </p>
-
-    <h2>
+    <h1>
+     Television energy consumption
+    </h1>
+    <p>
+     Explore information about television electricity usage
+    and energy efficiency in Australian households.
+    </p>
+   </section>
+   <section class="section">
+    <div class="section-heading">
+     <p class="eyebrow">
+      Overview
+     </p>
+     <h2>
       What affects a television's energy use?
-    </h2>
-
-  </div>
-
-
-  <div class="card-grid">
-
-
-    <article class="info-card">
-
+     </h2>
+    </div>
+    <div class="card-grid">
+     <article class="info-card">
       <h3>
-        Screen Size
+       Screen Size
       </h3>
-
       <p>
-        Larger screens may require more energy than smaller screens,
+       Larger screens may require more energy than smaller screens,
         although actual consumption depends on the model
         and display technology.
       </p>
-
-    </article>
-
-
-    <article class="info-card">
-
+     </article>
+     <article class="info-card">
       <h3>
-        Brightness
+       Brightness
       </h3>
-
       <p>
-        Higher brightness settings can increase energy use.
+       Higher brightness settings can increase energy use.
         Using automatic brightness or energy-saving modes
         may reduce consumption.
       </p>
-
-    </article>
-
-
-    <article class="info-card">
-
+     </article>
+     <article class="info-card">
       <h3>
-        Daily Viewing Time
+       Daily Viewing Time
       </h3>
-
       <p>
-        A television used for many hours each day will generally
+       A television used for many hours each day will generally
         consume more electricity over a year than one used occasionally.
       </p>
-
+     </article>
+    </div>
+   </section>
+   <section class="section d3-exercises" id="d3-exercises">
+    <div class="section-heading">
+     <p class="eyebrow">
+      COS30045 &middot; Week 4
+     </p>
+     <h2>
+      Television data visualisation &mdash; Exercises 4.3&ndash;4.7
+     </h2>
+     <p>
+      These five stages demonstrate how a responsive SVG develops into a complete D3 bar chart using television brand data.
+     </p>
+     <div aria-label="Jump to a D3 exercise" class="exercise-jump-links">
+      <a href="#exercise-4-3">
+       4.3 &middot; Set up SVG
+      </a>
+      <a href="#exercise-4-4">
+       4.4 &middot; Load CSV
+      </a>
+      <a href="#exercise-4-5">
+       4.5 &middot; Data binding
+      </a>
+      <a href="#exercise-4-6">
+       4.6 &middot; Scales
+      </a>
+      <a href="#exercise-4-7">
+       4.7 &middot; Labels
+      </a>
+     </div>
+     <p style="margin-top:15px">
+      Exercise 4.1 (SVG House and Garden) remains on its
+      <a href="../Exercise%204.1/svg_edited.html">
+       separate page
+      </a>
+      .
+     </p>
+    </div>
+    <div aria-live="polite" class="d3-error" id="tv-data-error" role="alert">
+    </div>
+    <article class="d3-step" id="exercise-4-3">
+     <p class="exercise-label">
+      Exercise 4.3
+     </p>
+     <h3>
+      D3 setup and responsive SVG
+     </h3>
+     <p>
+      We first use D3 to append an SVG to the page and add a rectangle. The SVG
+      <span class="code-note">
+       viewBox
+      </span>
+      controls its coordinate system.
+     </p>
+     <div aria-label="Responsive SVG with a blue rectangle" class="d3-chart-container" id="tv-chart-43">
+     </div>
+     <p class="d3-insight">
+      Code to explain:
+      <span class="code-note">
+       d3.select()
+      </span>
+      ,
+      <span class="code-note">
+       .append("svg")
+      </span>
+      ,
+      <span class="code-note">
+       .attr("viewBox", &hellip;)
+      </span>
+      and
+      <span class="code-note">
+       .append("rect")
+      </span>
+      .
+     </p>
     </article>
-
-
-  </div>
-
-
-</section>
-
-
-
-<section class="section">
-
-
-  <div class="section-heading">
-
-    <p class="eyebrow">
+    <article class="d3-step" id="exercise-4-4">
+     <p class="exercise-label">
+      Exercise 4.4
+     </p>
+     <h3>
+      Load television brand data from CSV
+     </h3>
+     <p>
+      Use
+      <span class="code-note">
+       d3.csv()
+      </span>
+      to read records, convert counts to numbers, inspect them in the console and sort descending. A preview of the loaded dataset is shown below.
+     </p>
+     <div class="d3-summary-grid">
+      <div class="d3-summary">
+       <strong id="tv-brand-total">
+        &mdash;
+       </strong>
+       <span>
+        Brands loaded
+       </span>
+      </div>
+      <div class="d3-summary">
+       <strong id="tv-brand-max">
+        &mdash;
+       </strong>
+       <span>
+        Highest brand count
+       </span>
+      </div>
+      <div class="d3-summary">
+       <strong id="tv-brand-min">
+        &mdash;
+       </strong>
+       <span>
+        Lowest brand count
+       </span>
+      </div>
+     </div>
+     <div class="d3-chart-container">
+      <table aria-label="Five largest TV brands" id="tv-data-table">
+       <thead>
+        <tr>
+         <th>
+          Brand
+         </th>
+         <th>
+          Count
+         </th>
+        </tr>
+       </thead>
+       <tbody id="tv-data-preview">
+        <tr>
+         <td colspan="2">
+          Loading data&hellip;
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p class="d3-insight">
+      Code to explain:
+      <span class="code-note">
+       +d.count
+      </span>
+      converts a CSV string to a number;
+      <span class="code-note">
+       d3.max()
+      </span>
+      finds the largest value;
+      <span class="code-note">
+       console.log()
+      </span>
+      helps debug.
+     </p>
+    </article>
+    <article class="d3-step" id="exercise-4-5">
+     <p class="exercise-label">
+      Exercise 4.5
+     </p>
+     <h3>
+      Bind data to rectangles
+     </h3>
+     <p>
+      D3 uses
+      <span class="code-note">
+       .data(data).join("rect")
+      </span>
+      to draw one horizontal bar for each brand. This first version uses the raw count as the bar width, before adding scales.
+     </p>
+     <div aria-label="Unscaled television brand bar chart" class="d3-chart-container" id="tv-chart-45">
+     </div>
+     <p class="d3-insight">
+      Code to explain:
+      <span class="code-note">
+       .data()
+      </span>
+      binds CSV rows to SVG elements and
+      <span class="code-note">
+       .join()
+      </span>
+      creates or updates rectangles.
+     </p>
+    </article>
+    <article class="d3-step" id="exercise-4-6">
+     <p class="exercise-label">
+      Exercise 4.6
+     </p>
+     <h3>
+      Apply linear and band scales
+     </h3>
+     <p>
+      The horizontal
+      <span class="code-note">
+       scaleLinear()
+      </span>
+      converts counts to pixel widths. The vertical
+      <span class="code-note">
+       scaleBand()
+      </span>
+      positions categories evenly and controls spacing.
+     </p>
+     <div aria-label="Scaled television brand bar chart" class="d3-chart-container" id="tv-chart-46">
+     </div>
+     <p class="d3-insight">
+      Code to explain:
+      <span class="code-note">
+       domain()
+      </span>
+      refers to the data values and
+      <span class="code-note">
+       range()
+      </span>
+      refers to the drawing coordinates.
+     </p>
+    </article>
+    <article class="d3-step" id="exercise-4-7">
+     <p class="exercise-label">
+      Exercise 4.7
+     </p>
+     <h3>
+      Final bar chart with brand and count labels
+     </h3>
+     <p>
+      The final version combines the scaled bars, brand names and numeric count labels. The bars are sorted from highest to lowest for easier comparison.
+     </p>
+     <div aria-label="Final television brand horizontal bar chart with labels" class="d3-chart-container" id="tv-chart-47">
+     </div>
+     <p class="d3-insight">
+      Code to explain: each
+      <span class="code-note">
+       g
+      </span>
+      contains a rectangle, a brand label and its count. The
+      <span class="code-note">
+       transform="translate(...)"
+      </span>
+      positions each group.
+     </p>
+    </article>
+   </section>
+   <section class="section">
+    <div class="section-heading">
+     <p class="eyebrow">
       Example Comparison
-    </p>
-
-    <h2>
+     </p>
+     <h2>
       Television energy data
-    </h2>
-
-    <p>
+     </h2>
+     <p>
       These values are example data and can be replaced
       with the provided dataset later.
-    </p>
-
-  </div>
-
-
-  <div class="table-wrapper">
-
-
-    <table>
-
-
+     </p>
+    </div>
+    <div class="table-wrapper">
+     <table>
       <thead>
-
-        <tr>
-
-          <th>
-            Model
-          </th>
-
-          <th>
-            Screen Size
-          </th>
-
-          <th>
-            Power
-          </th>
-
-          <th>
-            Estimated Annual Use
-          </th>
-
-        </tr>
-
+       <tr>
+        <th>
+         Model
+        </th>
+        <th>
+         Screen Size
+        </th>
+        <th>
+         Power
+        </th>
+        <th>
+         Estimated Annual Use
+        </th>
+       </tr>
       </thead>
-
-
       <tbody>
-
-
-        <tr>
-
-          <td>
-            EcoView A40
-          </td>
-
-          <td>
-            40 inch
-          </td>
-
-          <td>
-            65 W
-          </td>
-
-          <td>
-            95 kWh
-          </td>
-
-        </tr>
-
-
-        <tr>
-
-          <td>
-            BrightScreen B55
-          </td>
-
-          <td>
-            55 inch
-          </td>
-
-          <td>
-            95 W
-          </td>
-
-          <td>
-            139 kWh
-          </td>
-
-        </tr>
-
-
-        <tr>
-
-          <td>
-            HomeCinema C65
-          </td>
-
-          <td>
-            65 inch
-          </td>
-
-          <td>
-            135 W
-          </td>
-
-          <td>
-            197 kWh
-          </td>
-
-        </tr>
-
-
+       <tr>
+        <td>
+         EcoView A40
+        </td>
+        <td>
+         40 inch
+        </td>
+        <td>
+         65 W
+        </td>
+        <td>
+         95 kWh
+        </td>
+       </tr>
+       <tr>
+        <td>
+         BrightScreen B55
+        </td>
+        <td>
+         55 inch
+        </td>
+        <td>
+         95 W
+        </td>
+        <td>
+         139 kWh
+        </td>
+       </tr>
+       <tr>
+        <td>
+         HomeCinema C65
+        </td>
+        <td>
+         65 inch
+        </td>
+        <td>
+         135 W
+        </td>
+        <td>
+         197 kWh
+        </td>
+       </tr>
       </tbody>
-
-
-    </table>
-
-
-  </div>
-
-
-</section>
-
-
-
-<section class="section callout">
-
-
-  <div>
-
-    <p class="eyebrow">
+     </table>
+    </div>
+   </section>
+   <section class="section callout">
+    <div>
+     <p class="eyebrow">
       Energy Tip
-    </p>
-
-    <h2>
+     </p>
+     <h2>
       Reduce unnecessary standby time
-    </h2>
-
-    <p>
+     </h2>
+     <p>
       Consider switching the television off completely
       when it will not be used for an extended period.
-    </p>
-
-  </div>
-
-
-  <a
-    class="button"
-    href="index.html#calculator"
-  >
-    Estimate your TV cost
-  </a>
-
-
-</section>
-
-
-</main>
-
-
-
-<footer class="site-footer">
-
-  <p>
-    © <span class="current-year"></span>
+     </p>
+    </div>
+    <a class="button" href="index.html#calculator">
+     Estimate your TV cost
+    </a>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <p>
+    &copy;
+    <span class="current-year">
+    </span>
     Chong Jin Cheng.
     Generative AI was used to assist with website planning,
     coding and refinement.
-  </p>
-
-</footer>
-
-
-
-<script src="assets/js/main.js"></script>
-
-
-</body>
-
+   </p>
+  </footer>
+  <script src="assets/js/main.js">
+  </script>
+  <script src="https://d3js.org/d3.v7.min.js">
+  </script>
+  <script src="assets/js/television-exercises.js">
+  </script>
+ </body>
 </html>
